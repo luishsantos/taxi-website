@@ -6,7 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
-} from "@tanstack/react-router";
+} from "@tanstack/react-router"; 
 
 import appCss from "../styles.css?url";
 
@@ -72,15 +72,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Táxi Local" },
-      { name: "description", content: "Táxi local da aldeia — um toque para ligar." },
-      { property: "og:title", content: "Táxi Local" },
-      { property: "og:description", content: "Táxi local da aldeia — um toque para ligar." },
+      { title: "Táxis Vila da Ponte" },
+      { name: "description", content: "Táxis Vila da Ponte." },
+      { property: "og:title", content: "Táxis Vila da Ponte." },
+      { property: "og:description", content: "Táxis Vila da Ponte." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
