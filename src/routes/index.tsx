@@ -27,7 +27,7 @@ function Index() {
           <span className="font-display text-xl tracking-wide text-foreground">{BRAND}</span>
         </div> -->
  */}
-        <h1 className="font-display text-5xl sm:text-6xl leading-[1.05] mb-5 text-foreground whitespace-nowrap">
+        <h1 className="font-display text-4xl sm:text-6xl leading-[1.1] mb-5 text-foreground text-balance">
           <span className="text-gold">Táxis Vila da Ponte</span>
         </h1>
 
