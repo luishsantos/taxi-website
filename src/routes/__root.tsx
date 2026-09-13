@@ -78,8 +78,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Serviço de táxi em Vila da Ponte, Sernancelhe." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Táxis Vila da Ponte" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
