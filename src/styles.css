@@ -124,6 +124,28 @@
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
   }
 
+  /* Fluid hero title: the font size is derived from the viewport so the title
+     fills its line without wrapping. "Táxis Vila da Ponte" in Playfair Display
+     400 at -0.02em tracking measures ~8em wide and the line box is
+     (100vw - 3rem) from main's px-6 gutters, so ~(100vw - 3rem) / 8 puts it on
+     exactly one line. The margin baked into the constants also covers a
+     classic desktop scrollbar, which 100vw includes but cannot be used.
+
+     Wrapping is deliberately left enabled: once the viewport is narrow enough
+     that the 2rem floor kicks in the text stops fitting and breaks onto two
+     balanced lines rather than shrinking to an unreadable size (below ~305px).
+     Raise the floor to wrap sooner — the switch is at about floor * 8 + 48px.
+
+     The 3.4375rem cap is the largest size that still fits the max-w-md column,
+     so the title stays centred with the rest of the page.
+
+     clamp() and vw are supported by every engine since 2020; text-wrap:balance
+     is a progressive enhancement that only affects the wrapped case. */
+  .hero-title {
+    font-size: clamp(2rem, calc(12.3vw - 8.5px), 3.4375rem);
+    text-wrap: balance;
+  }
+
   @keyframes reveal-up {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
